@@ -1,0 +1,25 @@
+{
+  "name": "ckeditor5-build-classic-custom-nnanh3-misa",
+  "version": "1.0.0",
+  "description": "Thư viện config tiếng việt cho ckeditor ko có mathType",
+  "main": "build/ckeditor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anhncn/ckeditor5-build-classic-custom.git"
+  },
+  "keywords": [
+    "nnanh3",
+    "emis",
+    "ckeditor5",
+    "classic-build"
+  ],
+  "author": "nnanh3 from Misa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anhncn/ckeditor5-build-classic-custom/issues"
+  },
+  "homepage": "https://github.com/anhncn/ckeditor5-build-classic-custom#readme"
+}
