@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-classic-custom-nnanh3-misa",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Thư viện config tiếng việt cho ckeditor ko có mathType",
   "main": "build/ckeditor.js",
   "scripts": {
