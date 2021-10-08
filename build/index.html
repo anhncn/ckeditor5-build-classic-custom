@@ -9,11 +9,17 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- <link rel="stylesheet" href="./mathquill/mathquill.css"> -->
+		<link rel="stylesheet" href="./mathquill/mathquill.css">
 		<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
 		<style>
 			.ck.ck-editor{
 				width: 1000px !important;
+			}
+			section {
+				height: 40px !important;
+			}
+			p[class*="active"]{
+				width: 1000px;
 			}
 		</style>
 	</head>
@@ -40,14 +46,22 @@
 					<div class="editor-container">
 						<div class="editor hay-cuu-lay-em" >
                             Hello
+							<p><span class="math-type-nnanh" data-math-nnanh="123123">\\(123123\\)</span>Hello&nbsp;</p>
+                            <!-- <img src="https://via.placeholder.com/1000x300/02c7cd/fff?text=Placeholder%20image" alt="CKEditor 5 rocks!"> -->
+						</div>
+                        <div class="editor2 hay-cuu-lay-em" >
+                            Hello
+							Hello&nbsp;<span class="math-type-nnanh" data-math-nnanh="\frac{1}{33}">\(\frac{1}{33}\)</span>&nbsp;<span class="math-type-nnanh" data-math-nnanh="123">\(123\)</span>12313
                             <!-- <img src="https://via.placeholder.com/1000x300/02c7cd/fff?text=Placeholder%20image" alt="CKEditor 5 rocks!"> -->
 						</div>
 					</div>
 				</div></div>
+
+				<div id="editorViewer">123123123</div>
 			</div>
 		</main>
 		<footer>
-			<p><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener">CKEditor 5</a>
+			<p class="okila active-know"><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener">CKEditor 5</a>
 				– Rich text editor of tomorrow, available today
 			</p>
 			<p>Copyright © 2003-2021,
@@ -82,7 +96,7 @@
 
 		</script>
 		<script src="ckeditor.js"></script>
-		<script>ClassicEditor
+		<!-- <script>ClassicEditor
 				.create( document.querySelector( '.editor' ), {
 				toolbar: {
 					items: [
@@ -125,9 +139,9 @@
                 },
 				nnanhMathType:{
                     libScript:{
-                        styleCss: "http://127.0.0.1:5500//build/mathquill/mathquill.css",
+                        styleCss: "/build/mathquill/mathquill.css",
                         jqScript: "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
-                        mathScript: "http://127.0.0.1:5500//build/mathquill/mathquill.js",
+                        mathScript: "/build/mathquill/mathquill.min.js",
                     }
                 },
 				language: 'vi',
@@ -151,6 +165,67 @@
 					console.warn( 'Build id: j92ccuqpufj0-91dtbae0cujn' );
 					console.error( error );
 				} );
-		</script>
+		</script> -->
+		<script
+		type="text/javascript"
+		id="MathJax-script"
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg-full.js"
+		></script>
+        <script>ClassicEditor
+            .create( document.querySelector( '.editor2' ), {
+            toolbar: {
+                items: [
+                    'bold',
+                    'italic',
+                    'strikethrough',
+                    'underline',
+                    '|',
+                    'mathTypeNNAnh',
+                    'insertTable',
+                    'mediaEmbed',
+					'|',
+					'simpleBox',
+					'placeholder',
+                    '|',
+                    'undo',
+                    'redo'
+                ]
+            },
+            placeholderConfig: {
+                types: [ 'date', 'color', 'first name', 'surname' ]
+            },
+            // cloudServices: {
+            //     tokenUrl: 'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt',
+            //     uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/'
+            // },
+            nnanhMathType:{
+                libScript:{
+                    styleCss: "/mathquill/mathquill.css",
+                    jqScript: "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js",
+                    mathScript: "/mathquill/mathquill.min.js",
+                }
+            },
+            language: 'vi',
+            table: {
+                contentToolbar: [
+                    'tableColumn',
+                    'tableRow',
+                    'mergeTableCells',
+                    'tableCellProperties',
+                    'tableProperties'
+                ]
+            },
+                licenseKey: '',
+            } )
+            .then( editor => {
+                window.editorNNAnh = editor;
+            })
+            .catch( error => {
+                console.error( 'Oops, something went wrong!' );
+                console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+                console.warn( 'Build id: j92ccuqpufj0-91dtbae0cujn' );
+                console.error( error );
+            } );
+        </script>
 	</body>
 </html>
