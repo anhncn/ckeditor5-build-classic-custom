@@ -74,7 +74,7 @@
 		<p>Solve <span id="problem">ax^2 + bx + c = 0</span>.</p>
 		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 		<!-- <script src="./mathquill/mathquill.js"></script> -->
-
+		<input type="file" id="abcxyz" />
 		<script>
 		var mathFieldSpan = document.getElementById('math-field');
 		var latexSpan = document.getElementById('latex');
@@ -181,11 +181,13 @@
                     'underline',
                     '|',
                     'mathTypeNNAnh',
+					'uploadSimulate',
                     'insertTable',
+					'link',
                     'mediaEmbed',
 					'|',
-					'simpleBox',
-					'placeholder',
+					// 'simpleBox',
+					// 'placeholder',
                     '|',
                     'undo',
                     'redo'
@@ -205,6 +207,10 @@
                     mathScript: "/mathquill/mathquill.min.js",
                 }
             },
+			cfgUploadSimulate:{
+				title: 'xoa',
+				inputId: 'abcxyz'
+			},
             language: 'vi',
             table: {
                 contentToolbar: [
