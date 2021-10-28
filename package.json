@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-build-classic-custom-nnanh3-misa",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Thư viện ckeditor có mathType, blank box",
   "dependencies": {
     "@ckeditor/ckeditor5-adapter-ckfinder": "^25.0.0",
